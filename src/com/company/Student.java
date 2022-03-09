@@ -1,7 +1,6 @@
 package com.company;
 
 public class Student {
-    private static int _countStudent = 0;
     private int _ID;
     private String _name;
     private double _scores;
@@ -10,7 +9,6 @@ public class Student {
     private String _note;
 
     public Student(int ID, String name, double scores, String avatar, String address, String note) {
-        _countStudent += 1;
         _ID = ID;
         _name = name;
         _scores = scores;
@@ -20,17 +18,12 @@ public class Student {
     }
 
     public Student() {
-        _countStudent += 1;
         _ID = 0;
         _name = "No Name";
         _scores = 0.0;
         _avatar = "No Avatar";
         _address = "No Address";
         _note = "";
-    }
-
-    public static int get_countStudent() {
-        return _countStudent;
     }
 
     public int get_ID() {
