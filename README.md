@@ -6,6 +6,6 @@ Viết chương trình quản lý học sinh (giao diện console, lưu danh sá
 * Cập nhật thông tin học sinh
 * Xóa học sinh
 * Xem danh sách học sinh:
- + MHS tăng dần, giảm dần
- + Diem tăng dần, giảm dần
+   + MHS tăng dần, giảm dần
+   + Diem tăng dần, giảm dần
 * Import/Export danh sách học sinh ra file text (csv)
