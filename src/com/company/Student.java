@@ -73,4 +73,19 @@ public class Student {
     public void set_note(String _note) {
         this._note = _note;
     }
+
+    @Override public String toString() {
+        String result = "";
+        result = Integer.toString(_ID) + ", " + _name + ", " + Double.toString(_scores) + ", " + _avatar + ", " + _address + ", " + _note;
+
+        return result;
+    }
+
+    public String toShortString() {
+        String result = "";
+        result = Integer.toString(_ID) + ", " + _name + ", " + Double.toString(_scores);
+
+        return result;
+    }
+
 }
