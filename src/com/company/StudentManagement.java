@@ -87,11 +87,42 @@ public class StudentManagement {
     }
 
     // View list student with sortOrder
-    public void printList(ComparatorClass sortOrder) {
+    // sortOrder = 1 when sort ascending ID
+    // sortOrder = 2 when sort descending ID
+    // sortOrder = 3 when sort ascending scores
+    // sortOrder = 4 when sort descending scores
+    public void printList(int sortOrder) {
         ArrayList<Student> sortList = new ArrayList<>(_studentList);
-        Collections.sort(sortList, new sortOrder);
 
+        switch (sortOrder) {
+            case 1:
+            {
+                Collections.sort(sortList, new compareIDAscending());
+                break;
+            }
+            case 2:
+            {
+                Collections.sort(sortList, new compareIDDescending());
+                break;
+            }
+            case 3:
+            {
+                Collections.sort(sortList, new compareScoresAscending());
+                break;
+            }
+            case 4:
+            {
+                Collections.sort(sortList, new compareScoresDescending());
+                break;
+            }
+        }
+
+        for (Student std : sortList) {
+            System.out.println(std);
+        }
     }
+
+    
 
 
 }
