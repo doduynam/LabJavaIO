@@ -6,7 +6,32 @@ public class StudentManagement {
     private ArrayList<Student> _studentList;
 
     public StudentManagement() {
-        _studentList = new ArrayList<Student>();
+        _studentList = ReadWriteBin.readData("data.bin");
+    }
+
+    // Check ID available
+    public boolean isValidID(int ID) {
+        for(Student s : _studentList) {
+            if (s.get_ID() == ID) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Print infomation of student with ID
+    public void printStudent(int ID) {
+        for (Student s : _studentList) {
+            if (s.get_ID() == ID) {
+                System.out.println(s);
+                return;
+            }
+        }
+    }
+
+    // Get list student
+    public ArrayList<Student> get_studentList() {
+        return _studentList;
     }
 
     // Add student in list
@@ -120,7 +145,10 @@ public class StudentManagement {
         for (Student std : sortList) {
             System.out.println(std);
         }
+
+        
     }
+
 
 
 }

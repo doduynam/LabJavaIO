@@ -1,6 +1,8 @@
 package com.company;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private int _ID;
     private String _name;
     private double _scores;
@@ -23,7 +25,7 @@ public class Student {
         _scores = 0.0;
         _avatar = "No Avatar";
         _address = "No Address";
-        _note = "";
+        _note = "No Note";
     }
 
     public int get_ID() {
