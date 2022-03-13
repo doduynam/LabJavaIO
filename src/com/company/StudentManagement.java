@@ -145,8 +145,6 @@ public class StudentManagement {
         for (Student std : sortList) {
             System.out.println(std);
         }
-
-        
     }
 
 

@@ -13,12 +13,12 @@ public class Main {
     }
 
     private static void feature() {
-        System.out.println("1. Thêm học sinh.");
-        System.out.println("2. Cập nhật thông tin học sinh.");
-        System.out.println("3. Xóa học sinh.");
-        System.out.println("4. Xem danh sách học sinh.");
-        System.out.println("5. Import/Export danh sách học sinh (CSV)");
-        System.out.println("0. Thoát chương trình");
+        System.out.println("\t1. Thêm học sinh.");
+        System.out.println("\t2. Cập nhật thông tin học sinh.");
+        System.out.println("\t3. Xóa học sinh.");
+        System.out.println("\t4. Xem danh sách học sinh.");
+        System.out.println("\t5. Import/Export danh sách học sinh (CSV)");
+        System.out.println("\t0. Thoát chương trình");
 
     }
 
@@ -68,7 +68,11 @@ public class Main {
                     notes = scan.nextLine();
 
                     listStudent.addStudent(new Student(ID, name, scores, avatar, address, notes));
+                    System.out.println("Thêm học sinh thành công.");
 
+                    System.out.println("Nhấn enter để tiếp tục!");
+                    scan.nextLine();
+                    ReadWriteBin.writeData(listStudent.get_studentList(), "data.bin");
                     break;
                 }
                 case 2:
@@ -84,12 +88,12 @@ public class Main {
                     }
 
                     listStudent.printStudent(ID);
-                    System.out.println("1. Sửa Mã học sinh.");
-                    System.out.println("2. Sửa tên học sinh.");
-                    System.out.println("3. Sửa điểm");
-                    System.out.println("4. Sửa đường dẫn hình ảnh");
-                    System.out.println("5. Sửa địa chỉ");
-                    System.out.println("6. Sửa ghi chú");
+                    System.out.println("\t1. Sửa Mã học sinh.");
+                    System.out.println("\t2. Sửa tên học sinh.");
+                    System.out.println("\t3. Sửa điểm");
+                    System.out.println("\t4. Sửa đường dẫn hình ảnh");
+                    System.out.println("\t5. Sửa địa chỉ");
+                    System.out.println("\t6. Sửa ghi chú");
 
                     System.out.print("Nhập chức năng muốn thực hiện: ");
                     choice = Integer.parseInt(scan.nextLine());
@@ -194,10 +198,14 @@ public class Main {
                             break;
                     }
 
+                    System.out.println("Nhấn enter để tiếp tục!");
+                    scan.nextLine();
+                    ReadWriteBin.writeData(listStudent.get_studentList(), "data.bin");
+                    break;
                 }
                 case 3:
                 {
-                    System.out.println("3. Xóa học sinh.");
+                    System.out.println("Xóa học sinh.");
                     System.out.print("Nhập Mã học sinh cần xóa: ");
                     ID = Integer.parseInt(scan.nextLine());
 
@@ -222,29 +230,34 @@ public class Main {
                         System.out.println("Không xóa học sinh khỏi danh sách");
                     }
 
+                    System.out.println("Nhấn enter để tiếp tục!");
+                    scan.nextLine();
+                    ReadWriteBin.writeData(listStudent.get_studentList(), "data.bin");
                     break;
                 }
                 case 4:
                 {
                     System.out.println("Xem danh sách học sinh.");
 
-                    System.out.println("1. Xem danh sách theo mã học sinh tăng dần.");
-                    System.out.println("2. Xem danh sách theo mã học sinh giảm dần.");
-                    System.out.println("3. Xem danh sách theo điểm tăng dần.");
-                    System.out.println("4. Xem danh sách theo điểm giảm dần.");
+                    System.out.println("\t1. Xem danh sách theo mã học sinh tăng dần.");
+                    System.out.println("\t2. Xem danh sách theo mã học sinh giảm dần.");
+                    System.out.println("\t3. Xem danh sách theo điểm tăng dần.");
+                    System.out.println("\t4. Xem danh sách theo điểm giảm dần.");
 
                     System.out.print("Chọn cách hiển thị danh sách: ");
                     int sortOrder = Integer.parseInt(scan.nextLine());
 
                     listStudent.printList(sortOrder);
 
+                    System.out.println("Nhấn enter để tiếp tục!");
+                    scan.nextLine();
                     break;
                 }
                 case 5:
                 {
                     System.out.println("Import/Export danh sách học sinh (CSV)");
-                    System.out.println("1. Import danh sách học sinh từ file CSV");
-                    System.out.println("2. Export danh sách học sinh ra file CSV");
+                    System.out.println("\t1. Import danh sách học sinh từ file CSV");
+                    System.out.println("\t2. Export danh sách học sinh ra file CSV");
 
                     System.out.print("Nhập chức năng muốn thực hiện: ");
                     choice = Integer.parseInt(scan.nextLine());
@@ -272,6 +285,11 @@ public class Main {
                         default:
                             break;
                     }
+
+                    System.out.println("Nhấn enter để tiếp tục!");
+                    scan.nextLine();
+                    ReadWriteBin.writeData(listStudent.get_studentList(), "data.bin");
+                    break;
                 }
                 default:
                 {
