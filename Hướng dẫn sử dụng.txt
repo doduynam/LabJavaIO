@@ -1,0 +1,58 @@
+Hướng dẫn sử dụng:
+
+Có 5 chức năng chính trong chương trình gồm:
+	1. Thêm học sinh.
+	2. Cập nhật thông tin học sinh.
+	3. Xóa học sinh.
+	4. Xem danh sách học sinh.
+	5. Import/Export danh sách học sinh (CSV)
+	0. Thoát chương trình
+Nhập vào số tương ứng với chức năng muốn thực hiện. Sau khi thực hiện xong chức năng cần nhấn phím "Enter" để quay lại menu chọn chức năng ban đầu.
+
+Các chức năng:
+
+* Thêm học sinh
+	Đầu tiên nhập mã học sinh. (Chương trình sẽ kiểm tra mã học sinh có tồn tại hay không. Nếu mã học sinh đã có trong danh sách thì yêu cầu nhập lại mã học sinh.)
+	Tiếp theo nhập tên học sinh, điểm, đường dẫn hình ảnh, địa chỉ và ghi chú.
+	Sau khi nhập xong sẽ có thông báo thêm học sinh thành công.
+	Nhấn "Enter" để tiếp tục sử dụng các chức năng khác
+
+* Cập nhật thông tin học sinh.
+	Đầu tiên nhập vào mã học sinh cần cập nhật thông tin. (Chương trình sẽ kiểm tra mã học sinh có tồn tại hay không. Nếu mã học sinh không có trong danh sách thì yêu cầu nhập lại mã học sinh.)
+	Sau đó chương trình hiện ra thông tin của học sinh cần sửa và bảng chọn thông tin muốn sửa.
+	Chọn thông tin cần sửa và nhập lại thông tin mới.
+	Sau khi nhập xong sẽ có thông báo cập nhật thông tin thành công.
+	Nhấn "Enter" để tiếp tục sử dụng các chức năng khác
+
+* Xóa học sinh.
+	Đầu tiên nhập vào mã học sinh muốn xóa. (Chương trình sẽ kiểm tra mã học sinh có tồn tại hay không. Nếu mã học sinh không có trong danh sách thì yêu cầu nhập lại mã học sinh.)
+	Thông tin của học sinh được hiện ra. Xác nhận lại có muốn xóa học sinh hay không.
+	Nhập Y để xác nhận xóa học sinh hoặc N để hủy việc xóa học sinh.
+	Chương trình sẽ thông báo cho người dùng có xóa sinh viên hay chưa.
+	Nhấn "Enter" để tiếp tục sử dụng các chức năng khác
+
+* Xem danh sách học sinh.
+	Bảng tùy chọn cách sắp xếp sinh viên sẽ được hiện ra. Gồm có:
+	+ 1. Xem danh sách theo mã học sinh tăng dần.
+	+ 2. Xem danh sách theo mã học sinh giảm dần.
+	+ 3. Xem danh sách theo điểm tăng dần.
+	+ 4. Xem danh sách theo điểm giảm dần.
+
+	Nhập vào số tương ứng với cách sắp xếp mà bạn muốn xem.
+	Danh sách hiện ra theo đúng cách sắp xếp mà người dùng chọn.
+	Nhấn "Enter" để tiếp tục sử dụng các chức năng khác.
+
+* Import/Export danh sách học sinh (CSV)
+	Bảng chọn Import hay Export sẽ hiện lên. Gồm có: 
+	+ 1. Import danh sách học sinh từ file CSV
+	+ 2. Export danh sách học sinh ra file CSV
+
+	Bạn có thể chọn 1 hoặc 2 để thực hiện chức năng.
+	Sau đó nhập tên file CSV hoặc đường dẫn tới file CSV (Chú ý không cần nhập đuôi file .csv)
+	Sau khi import/export thành công chương trình sẽ hiện ra thông báo thành công.
+	Nhấn "Enter" để tiếp tục sử dụng các chức năng khác.
+
+* Thoát chương trình
+	Danh sách học sinh sẽ được lưu lại vào file "data.bin". Và kết thúc chương trình.
+
++++ Video demo chương trình: https://youtu.be/OWV7ANeEYP4

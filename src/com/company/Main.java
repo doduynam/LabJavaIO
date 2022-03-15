@@ -87,7 +87,9 @@ public class Main {
                         ID = Integer.parseInt(scan.nextLine());
                     }
 
+                    System.out.print("Thông tin học sinh cần sửa: ");
                     listStudent.printStudent(ID);
+
                     System.out.println("\t1. Sửa Mã học sinh.");
                     System.out.println("\t2. Sửa tên học sinh.");
                     System.out.println("\t3. Sửa điểm");
@@ -215,7 +217,9 @@ public class Main {
                         ID = Integer.parseInt(scan.nextLine());
                     }
 
+                    System.out.print("Thông tin học sinh muốn xóa: ");
                     listStudent.printStudent(ID);
+
                     System.out.print("Bạn có muốn xóa học sinh này ra khỏi danh sách? (Y/N): ");
                     String check = scan.nextLine();
                     if (check.equals("Y") || check.equals("y")) {
@@ -270,7 +274,7 @@ public class Main {
                             String filename = scan.nextLine();
 
                             ReadWriteCSV.readCSV(filename + ".csv");
-
+                            System.out.println("Import thành công");
                             break;
                         }
                         case 2:
@@ -280,6 +284,7 @@ public class Main {
                             String filename = scan.nextLine();
 
                             ReadWriteCSV.writeCSV(listStudent.get_studentList(), filename + ".csv");
+                            System.out.println("Export thành công");
                             break;
                         }
                         default:
