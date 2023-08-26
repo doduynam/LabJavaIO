@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="LabJavaIO:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/LabJavaIO_jar</output-path>
-    <root id="archive" name="LabJavaIO.jar">
-      <element id="module-output" name="LabJavaIO" />
-    </root>
-  </artifact>
-</component>
